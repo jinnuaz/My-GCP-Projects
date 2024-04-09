@@ -1,1 +1,1 @@
-bq mk --location=US --DATASET_ID="soccer"
+bq --location=US mk --DATASET_ID="soccer"
