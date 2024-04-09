@@ -14,8 +14,11 @@ gcloud compute networks create labnet --subnet-mode=custom
 # Create a subnet for labnet
 gcloud compute networks subnets create labnet-sub --network labnet --region "us-west1" --range 10.0.0.0/28
 
-#List the network in the project
+# List the network in the project
 gcloud compute networks list
 
 # Use describe to view network details, such as its peering connections and subnets. Replace NETWORK_NAME with the name of your network:
 gcloud compute networks describe labnet
+
+# Create the labnet-allow-internal firewall rule:
+gcloud compute firewall-rules create labnet-allow-internal --network=labnet --action=ALLOW --rules=icmp,tcp:22 --source-ranges=0.0.0.0/0
