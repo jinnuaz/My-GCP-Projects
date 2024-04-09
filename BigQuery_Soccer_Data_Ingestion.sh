@@ -1,8 +1,5 @@
-bq --location=US mk \
-    --dataset \
-    --default_kms_key=KMS_KEY_NAME \
-    --description="DESCRIPTION" \
-    --label=DATASET_ID:soccar \
-
-
+bq --location=US mk -d \
+    --default_table_expiration 3600 \
+    --description "This is my dataset." \
+    mydataset
 
