@@ -9,5 +9,5 @@ bq mk \
  --expiration 3600 \
  --description "This is my table" \
  --label organization:development \
- mydataset.mytable \
+ myotherproject:mydataset.mytable \
  /tmp/myschema.json
