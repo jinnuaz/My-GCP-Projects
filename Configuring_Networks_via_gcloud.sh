@@ -22,3 +22,6 @@ gcloud compute networks describe labnet
 
 # Create the labnet-allow-internal firewall rule:
 gcloud compute firewall-rules create labnet-allow-internal --network=labnet --action=ALLOW --rules=icmp,tcp:22 --source-ranges=0.0.0.0/0
+
+# Inspect the firewall rules to see its name, applicable network, and components, including whether the rule is enabled or disabled:
+gcloud compute firewall-rules describe labnet-allow-internal
