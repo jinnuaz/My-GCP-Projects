@@ -10,4 +10,4 @@ bq mk \
  --description "This is my table" \
  --label organization:development \
  myotherproject:mydataset.mytable \
- /tmp/myschema.json
+ /spls/bq-soccer-analytics/competitions.json
