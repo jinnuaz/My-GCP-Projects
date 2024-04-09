@@ -16,3 +16,6 @@ gcloud compute networks subnets create labnet-sub --network labnet --region "us-
 
 #List the network in the project
 gcloud compute networks list
+
+# Use describe to view network details, such as its peering connections and subnets. Replace NETWORK_NAME with the name of your network:
+gcloud compute networks describe labnet
