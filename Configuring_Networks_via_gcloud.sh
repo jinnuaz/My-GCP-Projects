@@ -25,3 +25,13 @@ gcloud compute firewall-rules create labnet-allow-internal --network=labnet --ac
 
 # Inspect the firewall rules to see its name, applicable network, and components, including whether the rule is enabled or disabled:
 gcloud compute firewall-rules describe labnet-allow-internal
+
+
+# Creating another custom VPC privatenet
+gcloud compute networks create privatenet --subnet-mode=custom
+
+#Create the private-sub subnet:
+gcloud compute networks subnets create private-sub --network=privatenet --region=us-west1 --range 10.1.0.0/28
+
+#create the privatenet-deny firewall rule:
+gcloud compute firewall-rules create privatenet-deny --network=privatenet --action=DENY --rules=icmp,tcp:22 --source-ranges=0.0.0.0/0
