@@ -35,3 +35,14 @@ gcloud compute networks subnets create private-sub --network=privatenet --region
 
 #create the privatenet-deny firewall rule:
 gcloud compute firewall-rules create privatenet-deny --network=privatenet --action=DENY --rules=icmp,tcp:22 --source-ranges=0.0.0.0/0
+
+# Create VM instances
+# Create two VM instances in the subnets:
+# pnet-vm in private-sub
+# lnet-vm in labnet-sub
+
+gcloud compute instance create pnet-vm --zone=us-central1-a --machine-type=n1-standard-1 --subnet=private-sub
+gcloud compute instance create lnet-vm --zone=us-central1-a --machine-type=n1-standard-1 --subnet=private-
+
+# Now list all the VM instances (sorted by zone):
+gcloud compute instances list --sort-by=us-central1-a
