@@ -1,0 +1,1 @@
+bq mk --location=US --DATASET_ID=soccer
