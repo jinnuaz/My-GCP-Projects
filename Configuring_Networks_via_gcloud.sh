@@ -41,8 +41,8 @@ gcloud compute firewall-rules create privatenet-deny --network=privatenet --acti
 # pnet-vm in private-sub
 # lnet-vm in labnet-sub
 
-gcloud compute instance create pnet-vm --zone=us-central1-a --machine-type=n1-standard-1 --subnet=private-sub
-gcloud compute instance create lnet-vm --zone=us-central1-a --machine-type=n1-standard-1 --subnet=private-
+gcloud compute instances create pnet-vm --zone=us-central1-a --machine-type=n1-standard-1 --subnet=private-sub
+gcloud compute instances create lnet-vm --zone=us-central1-a --machine-type=n1-standard-1 --subnet=labnet-sub
 
 # Now list all the VM instances (sorted by zone):
 gcloud compute instances list --sort-by=us-central1-a
