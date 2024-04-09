@@ -2,4 +2,7 @@
 gcloud auth list
 
 #You can list the project ID with this command:
-gcloud config list project
+gcloud config list
+
+# Instrall pinf to use later in this lab
+sudo apt install iputils-ping
